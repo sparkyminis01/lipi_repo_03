@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+   
     <!-- SEO Meta Tags -->
     <meta name="description" content="LipiKit by SparkyMinis - Discover our collection of innovative productivity apps and offline-first tools. From trip tracking to design workflows, find the perfect digital solution for your needs.">
     <meta name="keywords" content="productivity apps, offline tools, trip tracker, davinci resolve shortcuts, design tools, SparkyMinis, LipiKit, digital solutions">
     <meta name="author" content="SparkyMinis Media-Tech LLP">
     <meta name="robots" content="index, follow">
-    
+   
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="LipiKit - Innovative Apps by SparkyMinis">
     <meta property="og:description" content="Discover our collection of powerful, offline-first productivity apps designed to streamline your workflow and enhance productivity.">
@@ -17,26 +17,25 @@
     <meta property="og:url" content="https://lipikit.com">
     <meta property="og:image" content="https://lipikit.com/og-image.jpg">
     <meta property="og:site_name" content="LipiKit by SparkyMinis">
-    
+   
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="LipiKit - Innovative Apps by SparkyMinis">
     <meta name="twitter:description" content="Discover our collection of powerful, offline-first productivity apps designed to streamline your workflow.">
     <meta name="twitter:image" content="https://lipikit.com/twitter-card.jpg">
-    
+   
     <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
-    
+   
     <title>LipiKit - Innovative Apps by SparkyMinis | Productivity Tools & Digital Solutions</title>
-    
+   
     <style>
         :root {
-            --primary: #9333ea;
-            --primary-dark: #7c3aed;
-            --primary-light: #a855f7;
-            --accent: #f3e8ff;
-            --secondary: #3b82f6;
-            --secondary-light: #dbeafe;
+            --primary: #d97706;
+            --primary-dark: #b45309;
+            --primary-light: #f59e0b;
+            --accent: #fef3c7;
+            --secondary: #0891b2;
             --gray-900: #111827;
             --gray-800: #1f2937;
             --gray-700: #374151;
@@ -51,54 +50,12 @@
             --success: #10b981;
             --warning: #f59e0b;
         }
-
-        /* Theme Variables */
-        [data-theme="purple"] {
-            --primary: #9333ea;
-            --primary-dark: #7c3aed;
-            --primary-light: #a855f7;
-            --accent: #f3e8ff;
-            --secondary: #3b82f6;
-        }
-
-        [data-theme="blue"] {
-            --primary: #2563eb;
-            --primary-dark: #1d4ed8;
-            --primary-light: #3b82f6;
-            --accent: #dbeafe;
-            --secondary: #06b6d4;
-        }
-
-        [data-theme="emerald"] {
-            --primary: #059669;
-            --primary-dark: #047857;
-            --primary-light: #10b981;
-            --accent: #d1fae5;
-            --secondary: #0891b2;
-        }
-
-        [data-theme="rose"] {
-            --primary: #e11d48;
-            --primary-dark: #be123c;
-            --primary-light: #f43f5e;
-            --accent: #ffe4e6;
-            --secondary: #ec4899;
-        }
-
-        [data-theme="amber"] {
-            --primary: #d97706;
-            --primary-dark: #b45309;
-            --primary-light: #f59e0b;
-            --accent: #fef3c7;
-            --secondary: #0891b2;
-        }
-        
+       
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
-
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', Roboto, sans-serif;
             line-height: 1.6;
@@ -106,76 +63,6 @@
             background: var(--white);
             transition: all 0.3s ease;
         }
-
-        /* Theme Selector */
-        .theme-selector {
-            position: fixed;
-            top: 100px;
-            right: 20px;
-            background: var(--white);
-            border-radius: 12px;
-            padding: 1rem;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            border: 1px solid var(--gray-200);
-            z-index: 1000;
-            transition: transform 0.3s ease;
-        }
-
-        .theme-selector.collapsed {
-            transform: translateX(calc(100% - 50px));
-        }
-
-        .theme-toggle {
-            position: absolute;
-            left: -40px;
-            top: 50%;
-            transform: translateY(-50%);
-            background: var(--primary);
-            color: var(--white);
-            border: none;
-            border-radius: 8px 0 0 8px;
-            padding: 0.5rem;
-            cursor: pointer;
-            font-size: 1.2rem;
-            transition: background 0.3s ease;
-        }
-
-        .theme-toggle:hover {
-            background: var(--primary-dark);
-        }
-
-        .theme-options {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-        }
-
-        .theme-option {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.5rem;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background 0.2s ease;
-        }
-
-        .theme-option:hover {
-            background: var(--gray-100);
-        }
-
-        .theme-color {
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            border: 2px solid var(--gray-300);
-        }
-
-        .theme-option.active .theme-color {
-            border-color: var(--gray-700);
-            box-shadow: 0 0 0 2px var(--white), 0 0 0 4px var(--gray-400);
-        }
-
         /* Hero Section */
         .hero {
             background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
@@ -184,7 +71,6 @@
             position: relative;
             overflow: hidden;
         }
-
         .hero::before {
             content: '';
             position: absolute;
@@ -195,12 +81,10 @@
             background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><circle cx="200" cy="200" r="3" fill="rgba(255,255,255,0.1)"/><circle cx="600" cy="400" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="800" cy="100" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="300" cy="600" r="3" fill="rgba(255,255,255,0.1)"/><circle cx="900" cy="700" r="2" fill="rgba(255,255,255,0.1)"/></svg>');
             animation: float 20s ease-in-out infinite;
         }
-
         @keyframes float {
             0%, 100% { transform: translateY(0px); }
             50% { transform: translateY(-20px); }
         }
-
         .hero-content {
             max-width: 1200px;
             margin: 0 auto;
@@ -209,7 +93,6 @@
             position: relative;
             z-index: 1;
         }
-
         .brand-badge {
             display: inline-block;
             background: rgba(255, 255, 255, 0.2);
@@ -219,7 +102,6 @@
             margin-bottom: 1rem;
             backdrop-filter: blur(10px);
         }
-
         .hero h1 {
             font-size: 3.5rem;
             font-weight: 700;
@@ -229,7 +111,6 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-
         .hero .tagline {
             font-size: 1.25rem;
             margin-bottom: 2rem;
@@ -238,7 +119,6 @@
             margin-left: auto;
             margin-right: auto;
         }
-
         .hero .cta-buttons {
             display: flex;
             gap: 1rem;
@@ -246,7 +126,6 @@
             flex-wrap: wrap;
             margin-bottom: 2rem;
         }
-
         .btn-primary, .btn-secondary {
             padding: 1rem 2rem;
             border: none;
@@ -260,29 +139,24 @@
             align-items: center;
             gap: 0.5rem;
         }
-
         .btn-primary {
             background: var(--white);
             color: var(--primary);
             box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
         }
-
         .btn-primary:hover {
             transform: translateY(-2px);
             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
         }
-
         .btn-secondary {
             background: rgba(255, 255, 255, 0.1);
             color: var(--white);
             border: 2px solid rgba(255, 255, 255, 0.3);
         }
-
         .btn-secondary:hover {
             background: rgba(255, 255, 255, 0.2);
             border-color: rgba(255, 255, 255, 0.5);
         }
-
         .company-links {
             display: flex;
             justify-content: center;
@@ -290,19 +164,16 @@
             flex-wrap: wrap;
             margin-top: 1rem;
         }
-
         .company-link {
             color: rgba(255, 255, 255, 0.8);
             text-decoration: none;
             font-size: 0.9rem;
             transition: color 0.3s ease;
         }
-
         .company-link:hover {
             color: var(--white);
             text-decoration: underline;
         }
-
         /* Navigation */
         .nav {
             background: var(--white);
@@ -312,7 +183,6 @@
             z-index: 100;
             transition: all 0.3s ease;
         }
-
         .nav-content {
             max-width: 1200px;
             margin: 0 auto;
@@ -321,7 +191,6 @@
             justify-content: space-between;
             align-items: center;
         }
-
         .nav-logo {
             font-size: 1.5rem;
             font-weight: 700;
@@ -330,54 +199,45 @@
             align-items: center;
             gap: 0.5rem;
         }
-
         .nav-links {
             display: flex;
             gap: 2rem;
             list-style: none;
         }
-
         .nav-links a {
             text-decoration: none;
             color: var(--gray-700);
             font-weight: 500;
             transition: color 0.3s ease;
         }
-
         .nav-links a:hover {
             color: var(--primary);
         }
-
         /* Main Content */
         .main-content {
             max-width: 1200px;
             margin: 0 auto;
             padding: 4rem 2rem;
         }
-
         .section {
             margin-bottom: 4rem;
         }
-
         .section-header {
             text-align: center;
             margin-bottom: 3rem;
         }
-
         .section-header h2 {
             font-size: 2.5rem;
             font-weight: 700;
             color: var(--gray-900);
             margin-bottom: 1rem;
         }
-
         .section-header p {
             font-size: 1.1rem;
             color: var(--gray-600);
             max-width: 600px;
             margin: 0 auto;
         }
-
         /* About Section */
         .about-grid {
             display: grid;
@@ -385,7 +245,6 @@
             gap: 2rem;
             margin-top: 2rem;
         }
-
         .feature-card {
             background: var(--gray-50);
             padding: 2rem;
@@ -394,12 +253,10 @@
             border: 1px solid var(--gray-200);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-
         .feature-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
-
         .feature-icon {
             width: 60px;
             height: 60px;
@@ -412,14 +269,12 @@
             font-size: 1.5rem;
             color: var(--white);
         }
-
         /* Apps Grid */
         .apps-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
             gap: 2rem;
         }
-
         .app-card {
             background: var(--white);
             border-radius: 20px;
@@ -430,7 +285,6 @@
             position: relative;
             overflow: hidden;
         }
-
         .app-card::before {
             content: '';
             position: absolute;
@@ -440,18 +294,15 @@
             height: 4px;
             background: linear-gradient(90deg, var(--primary), var(--secondary));
         }
-
         .app-card:hover {
             transform: translateY(-8px);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
         }
-
         .app-header {
             display: flex;
             align-items: center;
             margin-bottom: 1rem;
         }
-
         .app-icon {
             width: 60px;
             height: 60px;
@@ -465,19 +316,16 @@
             color: var(--white);
             font-weight: 600;
         }
-
         .app-title {
             font-size: 1.25rem;
             font-weight: 600;
             color: var(--gray-900);
         }
-
         .app-description {
             color: var(--gray-600);
             margin-bottom: 1.5rem;
             line-height: 1.5;
         }
-
         .app-status {
             display: inline-flex;
             align-items: center;
@@ -487,17 +335,14 @@
             font-weight: 500;
             margin-bottom: 1rem;
         }
-
         .status-live {
             background: #dcfce7;
             color: #166534;
         }
-
         .status-coming-soon {
             background: #fef3c7;
             color: #92400e;
         }
-
         .app-btn {
             width: 100%;
             padding: 0.875rem 1.5rem;
@@ -511,23 +356,19 @@
             text-align: center;
             display: inline-block;
         }
-
         .app-btn.live {
             background: var(--primary);
             color: var(--white);
         }
-
         .app-btn.live:hover {
             background: var(--primary-dark);
             transform: translateY(-1px);
         }
-
         .app-btn.disabled {
             background: var(--gray-300);
             color: var(--gray-500);
             cursor: not-allowed;
         }
-
         /* External Links Section */
         .external-links {
             background: var(--accent);
@@ -537,21 +378,18 @@
             border: 1px solid var(--gray-200);
             margin: 2rem 0;
         }
-
         .external-links h3 {
             font-size: 1.5rem;
             font-weight: 600;
             color: var(--gray-900);
             margin-bottom: 1rem;
         }
-
         .external-links-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 1rem;
             margin-top: 1.5rem;
         }
-
         .external-link-card {
             background: var(--white);
             padding: 1.5rem;
@@ -559,35 +397,29 @@
             border: 1px solid var(--gray-200);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-
         .external-link-card:hover {
             transform: translateY(-3px);
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
         }
-
         .external-link-card h4 {
             color: var(--primary);
             font-weight: 600;
             margin-bottom: 0.5rem;
         }
-
         .external-link-card p {
             color: var(--gray-600);
             font-size: 0.9rem;
             margin-bottom: 1rem;
         }
-
         .external-link-card a {
             color: var(--primary);
             text-decoration: none;
             font-weight: 500;
             font-size: 0.9rem;
         }
-
         .external-link-card a:hover {
             text-decoration: underline;
         }
-
         /* Contact Section */
         .contact-section {
             background: var(--gray-50);
@@ -596,14 +428,12 @@
             text-align: center;
             border: 1px solid var(--gray-200);
         }
-
         .contact-section h3 {
             font-size: 1.5rem;
             font-weight: 600;
             color: var(--gray-900);
             margin-bottom: 1rem;
         }
-
         .contact-info {
             display: flex;
             justify-content: center;
@@ -611,24 +441,20 @@
             flex-wrap: wrap;
             margin-top: 1.5rem;
         }
-
         .contact-item {
             display: flex;
             align-items: center;
             gap: 0.5rem;
             color: var(--gray-600);
         }
-
         .contact-item a {
             color: var(--primary);
             text-decoration: none;
             font-weight: 500;
         }
-
         .contact-item a:hover {
             text-decoration: underline;
         }
-
         /* Footer */
         .footer {
             background: var(--gray-900);
@@ -636,7 +462,6 @@
             padding: 3rem 0 2rem;
             margin-top: 4rem;
         }
-
         .footer-content {
             max-width: 1200px;
             margin: 0 auto;
@@ -645,24 +470,20 @@
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
         }
-
         .footer-section h4 {
             color: var(--white);
             font-weight: 600;
             margin-bottom: 1rem;
         }
-
         .footer-section p, .footer-section a {
             color: var(--gray-400);
             text-decoration: none;
             margin-bottom: 0.5rem;
             display: block;
         }
-
         .footer-section a:hover {
             color: var(--primary-light);
         }
-
         .footer-bottom {
             border-top: 1px solid var(--gray-700);
             margin-top: 2rem;
@@ -670,66 +491,44 @@
             text-align: center;
             color: var(--gray-500);
         }
-
         /* Responsive Design */
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2.5rem;
             }
-            
+           
             .hero .tagline {
                 font-size: 1.1rem;
             }
-
             .nav-content {
                 flex-direction: column;
                 gap: 1rem;
             }
-
             .nav-links {
                 gap: 1rem;
             }
-
             .contact-info {
                 flex-direction: column;
                 align-items: center;
             }
-
-            .theme-selector {
-                position: relative;
-                top: auto;
-                right: auto;
-                margin: 1rem auto;
-                transform: none;
-            }
-
-            .theme-selector.collapsed {
-                transform: none;
-            }
-
-            .theme-toggle {
-                display: none;
-            }
         }
-
         @media (max-width: 480px) {
             .hero {
                 padding: 2rem 0;
             }
-            
+           
             .hero h1 {
                 font-size: 2rem;
             }
-            
+           
             .main-content {
                 padding: 2rem 1rem;
             }
-            
+           
             .apps-grid {
                 grid-template-columns: 1fr;
             }
         }
-
         /* Animations */
         @keyframes fadeInUp {
             from {
@@ -741,11 +540,9 @@
                 transform: translateY(0);
             }
         }
-
         .app-card {
             animation: fadeInUp 0.6s ease forwards;
         }
-
         .app-card:nth-child(1) { animation-delay: 0.1s; }
         .app-card:nth-child(2) { animation-delay: 0.2s; }
         .app-card:nth-child(3) { animation-delay: 0.3s; }
@@ -755,34 +552,7 @@
         .app-card:nth-child(7) { animation-delay: 0.7s; }
     </style>
 </head>
-<body data-theme="purple">
-    <!-- Theme Selector -->
-    <div class="theme-selector collapsed" id="themeSelector">
-        <button class="theme-toggle" onclick="toggleThemeSelector()">🎨</button>
-        <div class="theme-options">
-            <div class="theme-option active" onclick="setTheme('purple')">
-                <div class="theme-color" style="background: #9333ea;"></div>
-                <span>Purple</span>
-            </div>
-            <div class="theme-option" onclick="setTheme('blue')">
-                <div class="theme-color" style="background: #2563eb;"></div>
-                <span>Ocean Blue</span>
-            </div>
-            <div class="theme-option" onclick="setTheme('emerald')">
-                <div class="theme-color" style="background: #059669;"></div>
-                <span>Emerald</span>
-            </div>
-            <div class="theme-option" onclick="setTheme('rose')">
-                <div class="theme-color" style="background: #e11d48;"></div>
-                <span>Rose</span>
-            </div>
-            <div class="theme-option" onclick="setTheme('amber')">
-                <div class="theme-color" style="background: #d97706;"></div>
-                <span>Amber</span>
-            </div>
-        </div>
-    </div>
-
+<body data-theme="amber">
     <!-- Navigation -->
     <nav class="nav">
         <div class="nav-content">
@@ -798,7 +568,6 @@
             </ul>
         </div>
     </nav>
-
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
@@ -815,7 +584,6 @@
             </div>
         </div>
     </section>
-
     <!-- Main Content -->
     <main class="main-content">
         <!-- About Section -->
@@ -842,7 +610,6 @@
                 </div>
             </div>
         </section>
-
         <!-- Apps Section -->
         <section id="apps" class="section">
             <div class="section-header">
@@ -853,7 +620,6 @@
                 <!-- App cards will be dynamically inserted here -->
             </div>
         </section>
-
         <!-- External Links Section -->
         <section class="external-links">
             <h3>Explore SparkyMinis Ecosystem</h3>
@@ -871,7 +637,6 @@
                 </div>
             </div>
         </section>
-
         <!-- Contact Section -->
         <section id="contact" class="contact-section">
             <h3>Connect With Us</h3>
@@ -892,7 +657,6 @@
             </div>
         </section>
     </main>
-
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
@@ -924,7 +688,6 @@
             <p>&copy; <span id="current-year"></span> SparkyMinis Media-Tech LLP. All Rights Reserved. | LipiKit App Catalog</p>
         </div>
     </footer>
-
     <script>
         const apps = [
             {
@@ -977,35 +740,24 @@
                 status: 'coming-soon'
             }
         ];
-
-        const themes = {
-            purple: { name: 'Purple', color: '#9333ea' },
-            blue: { name: 'Ocean Blue', color: '#2563eb' },
-            emerald: { name: 'Emerald', color: '#059669' },
-            rose: { name: 'Rose', color: '#e11d48' },
-            amber: { name: 'Amber', color: '#d97706' }
-        };
-
         function getAppIcon(appName, icon) {
             if (icon) return icon;
             return appName.charAt(0).toUpperCase();
         }
-
         function renderApps() {
             const appsContainer = document.getElementById('apps-container');
             appsContainer.innerHTML = '';
-            
+           
             apps.forEach((app, index) => {
                 const appCard = document.createElement('div');
                 appCard.className = 'app-card';
                 appCard.style.animationDelay = `${index * 0.1}s`;
-                
+               
                 const statusClass = app.status === 'live' ? 'status-live' : 'status-coming-soon';
                 const statusText = app.status === 'live' ? '● Live & Available' : '● Coming Soon';
                 const buttonClass = app.status === 'live' ? 'app-btn live' : 'app-btn disabled';
                 const buttonText = app.status === 'live' ? 'Launch App →' : 'Notify Me';
                 const buttonLink = app.status === 'live' ? app.link : '#contact';
-
                 appCard.innerHTML = `
                     <div class="app-header">
                         <div class="app-icon">${getAppIcon(app.name, app.icon)}</div>
@@ -1015,60 +767,13 @@
                     <p class="app-description">${app.description}</p>
                     <a href="${buttonLink}" class="${buttonClass}" ${app.status !== 'live' ? 'onclick="handleComingSoon(); return false;"' : ''}>${buttonText}</a>
                 `;
-                
+               
                 appsContainer.appendChild(appCard);
             });
         }
-
         function handleComingSoon() {
             alert('Thank you for your interest! We\'ll notify you when this app launches.\n\nContact us at connect@sparkyminis.com to learn more about our development roadmap.');
         }
-
-        function setTheme(themeName) {
-            document.body.setAttribute('data-theme', themeName);
-            
-            // Update active theme option
-            document.querySelectorAll('.theme-option').forEach(option => {
-                option.classList.remove('active');
-            });
-            event.currentTarget.classList.add('active');
-            
-            // Store theme preference
-            if (typeof(Storage) !== "undefined") {
-                try {
-                    localStorage.setItem('lipikit-theme', themeName);
-                } catch(e) {
-                    // Handle cases where localStorage is not available
-                    console.log('Theme preference cannot be saved');
-                }
-            }
-        }
-
-        function toggleThemeSelector() {
-            const selector = document.getElementById('themeSelector');
-            selector.classList.toggle('collapsed');
-        }
-
-        function loadSavedTheme() {
-            if (typeof(Storage) !== "undefined") {
-                try {
-                    const savedTheme = localStorage.getItem('lipikit-theme');
-                    if (savedTheme && themes[savedTheme]) {
-                        document.body.setAttribute('data-theme', savedTheme);
-                        
-                        // Update active theme option
-                        document.querySelectorAll('.theme-option').forEach(option => {
-                            option.classList.remove('active');
-                        });
-                        document.querySelector(`[onclick="setTheme('${savedTheme}')"]`).classList.add('active');
-                    }
-                } catch(e) {
-                    // Handle cases where localStorage is not available
-                    console.log('Could not load saved theme');
-                }
-            }
-        }
-
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -1082,14 +787,11 @@
                 }
             });
         });
-
         // Initialize page
         window.addEventListener('DOMContentLoaded', function() {
             renderApps();
-            loadSavedTheme();
             document.getElementById('current-year').textContent = new Date().getFullYear();
         });
-
         // Add scroll effect to navigation
         window.addEventListener('scroll', function() {
             const nav = document.querySelector('.nav');
@@ -1099,14 +801,6 @@
             } else {
                 nav.style.background = 'var(--white)';
                 nav.style.backdropFilter = 'none';
-            }
-        });
-
-        // Close theme selector when clicking outside
-        document.addEventListener('click', function(e) {
-            const themeSelector = document.getElementById('themeSelector');
-            if (!themeSelector.contains(e.target)) {
-                themeSelector.classList.add('collapsed');
             }
         });
     </script>
