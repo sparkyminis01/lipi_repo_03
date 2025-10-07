@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
+  
     <!-- SEO Meta Tags -->
     <meta name="description" content="LipiKit by SparkyMinis - Discover our collection of innovative productivity apps and offline-first tools. From trip tracking to design workflows, find the perfect digital solution for your needs.">
     <meta name="keywords" content="productivity apps, offline tools, trip tracker, davinci resolve shortcuts, design tools, SparkyMinis, LipiKit, digital solutions">
     <meta name="author" content="SparkyMinis Media-Tech LLP">
     <meta name="robots" content="index, follow">
-   
+  
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="LipiKit - Innovative Apps by SparkyMinis">
     <meta property="og:description" content="Discover our collection of powerful, offline-first productivity apps designed to streamline your workflow and enhance productivity.">
@@ -17,21 +17,21 @@
     <meta property="og:url" content="https://lipikit.com">
     <meta property="og:image" content="https://lipikit.com/og-image.jpg">
     <meta property="og:site_name" content="LipiKit by SparkyMinis">
-   
+  
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="LipiKit - Innovative Apps by SparkyMinis">
     <meta name="twitter:description" content="Discover our collection of powerful, offline-first productivity apps designed to streamline your workflow.">
     <meta name="twitter:image" content="https://lipikit.com/twitter-card.jpg">
-   
+  
     <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
-   
+  
     <title>LipiKit - Innovative Apps by SparkyMinis | Productivity Tools & Digital Solutions</title>
 <!-- AdSense Script -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6822234477749633"
      crossorigin="anonymous"></script>
-    
+   
     <style>
         :root {
             --primary: #d97706;
@@ -53,7 +53,7 @@
             --success: #10b981;
             --warning: #f59e0b;
         }
-       
+      
         * {
             box-sizing: border-box;
             margin: 0;
@@ -458,6 +458,74 @@
         .contact-item a:hover {
             text-decoration: underline;
         }
+        .enquiry-form {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            max-width: 600px;
+            margin: 2rem auto 0;
+        }
+        .enquiry-form h4 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+            text-align: center;
+        }
+        .enquiry-form input, .enquiry-form textarea {
+            width: 100%;
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+            border: 1px solid var(--gray-300);
+            border-radius: 8px;
+            font-family: inherit;
+        }
+        .enquiry-form button {
+            background: var(--primary);
+            color: var(--white);
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+        .enquiry-form button:hover:not(:disabled) {
+            background: var(--primary-dark);
+            transform: translateY(-1px);
+        }
+        .enquiry-form button:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+        .course-display {
+            background: var(--accent);
+            padding: 0.5rem;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+            text-align: left;
+            font-weight: 500;
+            color: var(--primary);
+        }
+        .form-message {
+            display: none;
+            padding: 0.75rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            text-align: center;
+            font-weight: 500;
+        }
+        .form-message.success {
+            background: #dcfce7;
+            color: #166534;
+            border: 1px solid #bbf7d0;
+        }
+        .form-message.error {
+            background: #fef2f2;
+            color: #dc2626;
+            border: 1px solid #fecaca;
+        }
         /* Footer */
         .footer {
             background: var(--gray-900);
@@ -499,7 +567,7 @@
             .hero h1 {
                 font-size: 2.5rem;
             }
-           
+          
             .hero .tagline {
                 font-size: 1.1rem;
             }
@@ -514,20 +582,23 @@
                 flex-direction: column;
                 align-items: center;
             }
+            .enquiry-form {
+                padding: 1.5rem;
+            }
         }
         @media (max-width: 480px) {
             .hero {
                 padding: 2rem 0;
             }
-           
+          
             .hero h1 {
                 font-size: 2rem;
             }
-           
+          
             .main-content {
                 padding: 2rem 1rem;
             }
-           
+          
             .apps-grid {
                 grid-template-columns: 1fr;
             }
@@ -670,6 +741,18 @@
                     <span>Rapid Response & Support</span>
                 </div>
             </div>
+            <div class="enquiry-form" id="enquiryForm">
+                <h4>Send Us a Message</h4>
+                <form id="contactForm" action="https://docs.google.com/forms/d/e/1FAIpQLScP4IcUCtlgy2KNex6OsIgOnlE0pQ9orbgp9k55rsd9eZTmOQ/formResponse" method="POST" target="hidden_iframe">
+                    <input type="text" name="entry.1734609227" id="name" placeholder="Your Name" required>
+                    <input type="email" name="entry.1976770476" id="email" placeholder="Your Email" required>
+                    <input type="hidden" name="entry.193589284" id="course" value="LipiKit general">
+                    <div class="course-display">For: <span id="courseName">General Enquiry</span></div>
+                    <textarea rows="4" name="entry.1538540993" id="message" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+                <div id="form-message" class="form-message"></div>
+            </div>
         </section>
     </main>
     <!-- Footer -->
@@ -703,6 +786,7 @@
             <p>&copy; <span id="current-year"></span> SparkyMinis Media-Tech LLP. All Rights Reserved. | LipiKit App Catalog</p>
         </div>
     </footer>
+    <iframe id="hidden_iframe" name="hidden_iframe" style="display: none;"></iframe>
     <script>
         const apps = [
             {
@@ -776,12 +860,12 @@
         function renderApps() {
             const appsContainer = document.getElementById('apps-container');
             appsContainer.innerHTML = '';
-           
+          
             apps.forEach((app, index) => {
                 const appCard = document.createElement('div');
                 appCard.className = 'app-card';
                 appCard.style.animationDelay = `${index * 0.1}s`;
-               
+              
                 const statusClass = app.status === 'live' ? 'status-live' : 'status-coming-soon';
                 const statusText = app.status === 'live' ? '● Live & Available' : '● Coming Soon';
                 const buttonClass = app.status === 'live' ? 'app-btn live' : 'app-btn disabled';
@@ -796,7 +880,7 @@
                     <p class="app-description">${app.description}</p>
                     <a href="${buttonLink}" class="${buttonClass}" ${app.status !== 'live' ? 'onclick="handleComingSoon(); return false;"' : ''}>${buttonText}</a>
                 `;
-               
+              
                 appsContainer.appendChild(appCard);
             });
         }
@@ -831,6 +915,39 @@
                 nav.style.background = 'var(--white)';
                 nav.style.backdropFilter = 'none';
             }
+        });
+        // Form submission handler using hidden iframe
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('contactForm');
+            const messageEl = document.getElementById('form-message');
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+
+            form.addEventListener('submit', function(e) {
+                // No preventDefault() - let it submit to iframe
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Sending...';
+                messageEl.style.display = 'none';
+
+                // Assume success after a short delay (time for submission to complete)
+                setTimeout(() => {
+                    messageEl.textContent = 'Thank you! Your message has been sent. We\'ll get back to you soon. ⚡';
+                    messageEl.className = 'form-message success';
+                    messageEl.style.display = 'block';
+
+                    // Reset form
+                    form.reset();
+                    document.getElementById('course').value = 'LipiKit general';
+                    document.getElementById('courseName').textContent = 'General Enquiry';
+
+                    // Reset button
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = originalText;
+
+                    // Reset iframe
+                    document.getElementById('hidden_iframe').src = 'about:blank';
+                }, 2000);
+            });
         });
     </script>
 </body>
