@@ -4,13 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-    <!-- SEO Meta Tags -->
     <meta name="description" content="LipiKit by SparkyMinis - Discover our collection of innovative productivity apps and offline-first tools. From trip tracking to design workflows, find the perfect digital solution for your needs.">
     <meta name="keywords" content="productivity apps, offline tools, trip tracker, davinci resolve shortcuts, design tools, SparkyMinis, LipiKit, digital solutions">
     <meta name="author" content="SparkyMinis Media-Tech LLP">
     <meta name="robots" content="index, follow">
   
-    <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="LipiKit - Innovative Apps by SparkyMinis">
     <meta property="og:description" content="Discover our collection of powerful, offline-first productivity apps designed to streamline your workflow and enhance productivity.">
     <meta property="og:type" content="website">
@@ -18,17 +16,14 @@
     <meta property="og:image" content="https://lipikit.com/og-image.jpg">
     <meta property="og:site_name" content="LipiKit by SparkyMinis">
   
-    <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="LipiKit - Innovative Apps by SparkyMinis">
     <meta name="twitter:description" content="Discover our collection of powerful, offline-first productivity apps designed to streamline your workflow.">
     <meta name="twitter:image" content="https://lipikit.com/twitter-card.jpg">
   
-    <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
   
     <title>LipiKit - Innovative Apps by SparkyMinis | Productivity Tools & Digital Solutions</title>
-<!-- AdSense Script -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6822234477749633"
      crossorigin="anonymous"></script>
    
@@ -627,7 +622,6 @@
     </style>
 </head>
 <body data-theme="amber">
-    <!-- Navigation -->
     <nav class="nav">
         <div class="nav-content">
             <div class="nav-logo">
@@ -642,7 +636,6 @@
             </ul>
         </div>
     </nav>
-    <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
             <div class="brand-badge">Powered by SparkyMinis Media-Tech</div>
@@ -658,9 +651,7 @@
             </div>
         </div>
     </section>
-    <!-- Main Content -->
     <main class="main-content">
-        <!-- About Section -->
         <section id="about" class="section">
             <div class="section-header">
                 <h2>Why LipiKit Apps?</h2>
@@ -684,7 +675,6 @@
                 </div>
             </div>
         </section>
-<!-- Ad Unit -->
 <div class="my-ad-container">
   <ins class="adsbygoogle"
        style="display:block"
@@ -696,17 +686,14 @@
        (adsbygoogle = window.adsbygoogle || []).push({});
   </script>
 </div>
-        <!-- Apps Section -->
         <section id="apps" class="section">
             <div class="section-header">
                 <h2>Our Application Suite</h2>
                 <p>Explore our growing collection of productivity tools, each crafted to solve real-world challenges with elegant, efficient solutions.</p>
             </div>
             <div id="apps-container" class="apps-grid">
-                <!-- App cards will be dynamically inserted here -->
-            </div>
+                </div>
         </section>
-        <!-- External Links Section -->
         <section class="external-links">
             <h3>Explore SparkyMinis Ecosystem</h3>
             <p>Discover more about our company, leadership, and vision for the future of digital productivity.</p>
@@ -723,7 +710,6 @@
                 </div>
             </div>
         </section>
-        <!-- Contact Section -->
         <section id="contact" class="contact-section">
             <h3>Connect With Us</h3>
             <p>Have questions about our applications, need custom solutions, or want to collaborate? We're here to help.</p>
@@ -743,7 +729,11 @@
             </div>
             <div class="enquiry-form" id="enquiryForm">
                 <h4>Send Us a Message</h4>
-                <form id="contactForm" action="https://docs.google.com/forms/d/e/1FAIpQLScP4IcUCtlgy2KNex6OsIgOnlE0pQ9orbgp9k55rsd9eZTmOQ/formResponse" method="POST" target="hidden_iframe">
+                <form id="contactForm">
+                    <div style="position:absolute; left:-5000px;" aria-hidden="true">
+                        <label for="url-trap">Leave this field blank</label>
+                        <input type="text" name="honeypot-field" id="url-trap" tabindex="-1" autocomplete="off">
+                    </div>
                     <input type="text" name="entry.1734609227" id="name" placeholder="Your Name" required>
                     <input type="email" name="entry.1976770476" id="email" placeholder="Your Email" required>
                     <input type="hidden" name="entry.193589284" id="course" value="LipiKit general">
@@ -755,7 +745,6 @@
             </div>
         </section>
     </main>
-    <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-section">
@@ -786,7 +775,6 @@
             <p>&copy; <span id="current-year"></span> SparkyMinis Media-Tech LLP. All Rights Reserved. | LipiKit App Catalog</p>
         </div>
     </footer>
-    <iframe id="hidden_iframe" name="hidden_iframe" style="display: none;"></iframe>
     <script>
         const apps = [
             {
@@ -900,11 +888,71 @@
                 }
             });
         });
-        // Initialize page
-        window.addEventListener('DOMContentLoaded', function() {
+        
+        // Form submission handler (Replaced old iframe logic with fetch/honeypot logic)
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('contactForm');
+            const messageEl = document.getElementById('form-message');
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            const actionUrl = 'https://docs.google.com/forms/d/e/1FAIpQLScP4IcUCtlgy2KNex6OsIgOnlE0pQ9orbgp9k55rsd9eZTmOQ/formResponse'; // Same Google Form URL
+
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+
+                // --- HONEYPOT CHECK ADDED HERE ---
+                const honeypotField = form.querySelector('#url-trap');
+                if (honeypotField && honeypotField.value.length > 0) {
+                    // Bot caught: Display success message to trick the bot, but DO NOT call fetch.
+                    console.error("Submission blocked by honeypot.");
+                    messageEl.textContent = 'Done.';
+                    messageEl.className = 'form-message success';
+                    messageEl.style.display = 'block';
+                    return; // Crucial: Exit the function to prevent form submission
+                }
+                // --- END HONEYPOT CHECK ---
+
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Sending...';
+                messageEl.style.display = 'none';
+
+                const formData = new FormData(form);
+                
+                try {
+                    const response = await fetch(actionUrl, {
+                        method: 'POST',
+                        body: formData
+                    });
+                    
+                    const responseText = await response.text();
+
+                    // Check for typical Google Forms success message or general success status
+                    if (responseText.includes('Your response has been recorded') || response.ok) {
+                        messageEl.textContent = 'Thank you! Your message has been sent. We\'ll get back to you soon. ⚡';
+                        messageEl.className = 'form-message success';
+                        form.reset();
+                        document.getElementById('course').value = 'LipiKit general';
+                        document.getElementById('courseName').textContent = 'General Enquiry';
+                    } else {
+                        throw new Error('Submission failed');
+                    }
+                    
+                } catch (error) {
+                    // Fail-safe: Display success message to the bot even on network/fetch errors
+                    console.error('Submission error:', error);
+                    messageEl.textContent = 'Done.'; 
+                    messageEl.className = 'form-message success';
+                } finally {
+                    messageEl.style.display = 'block';
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = originalText;
+                }
+            });
+            
             renderApps();
             document.getElementById('current-year').textContent = new Date().getFullYear();
         });
+        
         // Add scroll effect to navigation
         window.addEventListener('scroll', function() {
             const nav = document.querySelector('.nav');
@@ -915,39 +963,6 @@
                 nav.style.background = 'var(--white)';
                 nav.style.backdropFilter = 'none';
             }
-        });
-        // Form submission handler using hidden iframe
-        document.addEventListener('DOMContentLoaded', function() {
-            const form = document.getElementById('contactForm');
-            const messageEl = document.getElementById('form-message');
-            const submitBtn = form.querySelector('button[type="submit"]');
-            const originalText = submitBtn.textContent;
-
-            form.addEventListener('submit', function(e) {
-                // No preventDefault() - let it submit to iframe
-                submitBtn.disabled = true;
-                submitBtn.textContent = 'Sending...';
-                messageEl.style.display = 'none';
-
-                // Assume success after a short delay (time for submission to complete)
-                setTimeout(() => {
-                    messageEl.textContent = 'Thank you! Your message has been sent. We\'ll get back to you soon. ⚡';
-                    messageEl.className = 'form-message success';
-                    messageEl.style.display = 'block';
-
-                    // Reset form
-                    form.reset();
-                    document.getElementById('course').value = 'LipiKit general';
-                    document.getElementById('courseName').textContent = 'General Enquiry';
-
-                    // Reset button
-                    submitBtn.disabled = false;
-                    submitBtn.textContent = originalText;
-
-                    // Reset iframe
-                    document.getElementById('hidden_iframe').src = 'about:blank';
-                }, 2000);
-            });
         });
     </script>
 </body>
